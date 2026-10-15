@@ -244,54 +244,22 @@ export function StarControl({ value, onChange, min = 0, minReason }: StarLimits 
   );
 }
 
-/**
- * Larger star editor for the details drawer: the icons as in game, then every type to pick from.
- */
+/** Larger star editor for the details drawer: − / the icons as in game / +, with the level spelled out. */
 export function StarPicker({ value, onChange, min = 0, minReason }: StarLimits & { value: number; onChange: (level: number) => void }) {
-  const { type, count } = starParts(value);
   const set = (level: number) => onChange(Math.max(min, Math.min(MAX_STARS, level)));
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col items-center gap-2 rounded-xl bg-surface-secondary/60 p-4">
-        <div className="flex items-center gap-3">
-          <LessButton value={value} min={min} minReason={minReason} onPress={() => set(value - 1)} size={16} />
-          <StarSlotsInput value={value} onChange={set} size={34} min={min} />
-          <Button isIconOnly size="sm" variant="ghost" aria-label="One more star" isDisabled={value >= MAX_STARS} onPress={() => set(value + 1)}>
-            <Plus size={16} />
-          </Button>
-        </div>
-        <p className="text-center text-sm">
-          <span className="font-semibold tabular-nums">{value}★</span> <span className="text-muted">· {describeStars(value)}</span>
-        </p>
+    <div className="flex flex-col items-center gap-2 rounded-xl bg-surface-secondary/60 p-4">
+      <div className="flex items-center gap-3">
+        <LessButton value={value} min={min} minReason={minReason} onPress={() => set(value - 1)} size={16} />
+        <StarSlotsInput value={value} onChange={set} size={34} min={min} />
+        <Button isIconOnly size="sm" variant="ghost" aria-label="One more star" isDisabled={value >= MAX_STARS} onPress={() => set(value + 1)}>
+          <Plus size={16} />
+        </Button>
       </div>
-
-      <div>
-        <p className="mb-2 text-xs text-muted">Newest icon type showing</p>
-        <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
-          {STAR_TYPES.map((t, i) => (
-            <button
-              key={t.name}
-              type="button"
-              aria-pressed={i === type && count > 0}
-              disabled={starLevel(i, SLOTS) < min}
-              onClick={() => set(starLevel(i, Math.max(count, 1)))}
-              className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-left text-sm transition-colors disabled:cursor-not-allowed disabled:opacity-35 ${
-                i === type && count > 0 ? 'bg-accent/15 text-foreground ring-1 ring-accent' : 'text-muted hover:bg-surface-secondary'
-              }`}
-            >
-              <StarGlyph type={t} size={18} />
-              <span className="min-w-0 flex-1 truncate">
-                {t.name}
-                {t.unconfirmed && <span className="text-muted">?</span>}
-              </span>
-              <span className="text-[11px] tabular-nums opacity-70">
-                {i * SLOTS + 1}–{(i + 1) * SLOTS}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
+      <p className="text-center text-sm">
+        <span className="font-semibold tabular-nums">{value}★</span> <span className="text-muted">· {describeStars(value)}</span>
+      </p>
     </div>
   );
 }

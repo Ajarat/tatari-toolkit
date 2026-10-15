@@ -1,15 +1,16 @@
 import { Button, Chip, Drawer, ToggleButton, ToggleButtonGroup } from '@heroui/react';
-import { ArrowUpCircle, RotateCcw } from 'lucide-react';
+import { ArrowUpCircle, Circle, CircleCheck, RotateCcw } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import { formName, lines, maxTier } from '../data/game';
 import { copiesBetween, describeStars } from '../data/stars';
-import { eventName, starFloor, taskLabel } from '../logic/labels';
-import { checkKey, isPrepTask, opportunities, readiness } from '../logic/plan';
+import { eventName, feedProgress, starFloor, taskLabel } from '../logic/labels';
+import { checkKey, feedTaskMet, isPrepTask, opportunities, readiness } from '../logic/plan';
 import { DAY, scheduleWindows } from '../logic/schedule';
 import { fmtDate, useNow } from '../logic/time';
 import { blankTatari, useStore } from '../state/store';
 import { useEditTatari } from '../state/useEditTatari';
 import { CheckRow, ElementChip, ReadyChip, SectionTitle, StarsChip, TatariAvatar } from './bits';
+import { FeedingEditor } from './Feeding';
 import { StarPicker } from './Stars';
 
 export function TatariEditor() {
@@ -76,7 +77,12 @@ function EditorBody({ lineId }: { lineId: string }) {
 
         <section>
           <SectionTitle>Stars</SectionTitle>
-          <StarPicker value={t.stars} onChange={(stars) => update(lineId, { stars })} {...starFloor(line, t.tier, name)} />
+          <StarPicker value={t.stars} onChange={(stars) => update(lineId, { stars })} {...starFloor(line, t, name)} />
+        </section>
+
+        <section>
+          <SectionTitle>Feeding</SectionTitle>
+          <FeedingEditor line={line} t={t} onChange={(patch) => update(lineId, patch)} />
         </section>
 
         {r ? (
@@ -100,7 +106,14 @@ function EditorBody({ lineId }: { lineId: string }) {
             )}
             <div className="flex flex-col">
               {r.step.tasks.map((task, i) =>
-                isPrepTask(task) ? (
+                task.kind === 'feed' ? (
+                  <p key={i} className="flex items-start gap-2.5 py-1 text-sm">
+                    {feedTaskMet(t, task) ? <CircleCheck size={16} className="mt-0.5 shrink-0 text-success" /> : <Circle size={16} className="mt-0.5 shrink-0 text-muted" />}
+                    <span>
+                      {taskLabel(task)} <span className="text-muted">· {feedProgress(t, task)}</span>
+                    </span>
+                  </p>
+                ) : isPrepTask(task) ? (
                   <CheckRow key={i} checked={!!t.checks[checkKey(r.step, i)]} onChange={(v) => toggleCheck(lineId, checkKey(r.step, i), v)}>
                     {taskLabel(task)}
                   </CheckRow>

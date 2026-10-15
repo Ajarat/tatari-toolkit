@@ -1,4 +1,5 @@
 import { EVENTS } from '../data/events';
+import { gradeAtLeast, ratingOf, stageFromGrades, type StatGrades } from '../data/feeding';
 import type { EventSlot, Line, Step, Task } from '../data/types';
 import { windowKey, type EventWindow } from './schedule';
 
@@ -11,6 +12,8 @@ export type OwnedTatari = {
   stars: number;
   /** Ticked prerequisites, keyed by `checkKey`. Keys include the target tier, so evolving starts a fresh list. */
   checks: Record<string, boolean>;
+  /** Attack, health and defence grades. The card's Rating is the lowest; the feeding stage follows from them. */
+  grades?: StatGrades;
   /** Window (see `windowKey`) the player has chosen to evolve this Tatari in. */
   plannedFor?: string;
   note?: string;
@@ -47,6 +50,24 @@ export function stepSlots(step: Step): EventSlot[][] | null {
 
 export const fitsWindow = (step: Step, slot: EventSlot) => stepSlots(step)?.every((slots) => slots.includes(slot)) ?? false;
 
+/** Feeding stage a "feed" task asks for: "raise stats 3 times" is stage 3. B quality is about the Rating instead. */
+export const FEED_TASK_STAGE = 3;
+
+/** Whether a feed task is done, from what the player entered about feeding (it counts retroactively). */
+export function feedTaskMet(t: OwnedTatari, task: Extract<Task, { kind: 'feed' }>) {
+  return task.grade === 'B' ? gradeAtLeast(rating(t), 'B') : feedStage(t) >= FEED_TASK_STAGE;
+}
+
+/** Feeding stage (number of feeding upgrades), worked out from the stat grades; 0 until they're entered. */
+export const feedStage = (t: Pick<OwnedTatari, 'grades'>) => (t.grades ? stageFromGrades(t.grades) : 0);
+
+/** The card's Rating letter, once the player has entered the stat grades. */
+export const rating = (t: OwnedTatari) => (t.grades ? ratingOf(t.grades) : undefined);
+
+/** A prep task is done when its feeding is reached, or (for other tasks) when the player ticked it. */
+export const prepTaskMet = (t: OwnedTatari, step: Step, task: Task, index: number) =>
+  task.kind === 'feed' ? feedTaskMet(t, task) : !!t.checks[checkKey(step, index)];
+
 export type Readiness = {
   step: Step;
   starsMissing: number;
@@ -59,7 +80,7 @@ export function readiness(t: OwnedTatari, line: Line): Readiness | null {
   const step = nextStep(line, t.tier);
   if (!step) return null;
   const starsMissing = Math.max(0, (step.stars ?? 0) - t.stars);
-  const unmet = step.tasks.map((task, index) => ({ task, index })).filter(({ task, index }) => isPrepTask(task) && !t.checks[checkKey(step, index)]);
+  const unmet = step.tasks.map((task, index) => ({ task, index })).filter(({ task, index }) => isPrepTask(task) && !prepTaskMet(t, step, task, index));
   return { step, starsMissing, unmet, ready: starsMissing === 0 && unmet.length === 0 };
 }
 
@@ -124,5 +145,5 @@ export function suggestPlan(windows: EventWindow[], owned: OwnedTatari[], lines:
 
 /** Short label for a feeding requirement. Stage 3 is 540 food points in total and needs 2 stars. */
 export function feedLabel(task: Extract<Task, { kind: 'feed' }>) {
-  return task.grade === 'B' ? 'Feed to B quality' : 'Raise stats 3 times (feeding stage 3)';
+  return task.grade === 'B' ? 'Feed to B rating' : 'Feed to stage 3 (3 stat upgrades)';
 }

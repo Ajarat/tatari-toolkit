@@ -4,7 +4,8 @@ import { DEFAULT_GOLD_RUSH, DEFAULT_ROTATION } from '../data/events';
 import data from '../data/lines.json' with { type: 'json' };
 import { copiesBetween, describeStars, starLevel, starParts } from '../data/stars';
 import type { GameData, Line } from '../data/types';
-import { candidatesFor, checkKey, minStarsForTier, nextStep, readiness, stepSlots, suggestPlan, type OwnedTatari } from './plan';
+import { FEED_STAGES, maxFeedStage, pointsToStage, ratingOf, stageFromGrades, upgradesToGrade, type StatGrades } from '../data/feeding';
+import { candidatesFor, feedTaskMet, minStarsForTier, nextStep, readiness, stepSlots, suggestPlan, type OwnedTatari } from './plan';
 import { anchorFromCurrent, goldRushWindows, rotationWindows, windowKey } from './schedule';
 
 const lines = new Map((data as GameData).lines.map((l) => [l.id, l as Line]));
@@ -52,17 +53,15 @@ test('readiness tracks stars and prep tasks', () => {
   const step = nextStep(line, 2)!;
   const feedIndex = step.tasks.findIndex((t) => t.kind === 'feed');
   assert.equal(readiness(owned('droppit', 2, 10), line)!.starsMissing, (step.stars ?? 0) - 10);
-  const r = readiness(owned('droppit', 2, 40, { [checkKey(step, feedIndex)]: true }), line)!;
+  assert.equal(readiness(owned('droppit', 2, 40), line)!.unmet[0]?.index, feedIndex);
+  const r = readiness({ ...owned('droppit', 2, 40), grades: { atk: 'C', hp: 'D', def: 'C' } }, line)!;
   assert.equal(r.ready, true);
 });
 
 test('candidates and suggestions favour ready Tatari, two per event', () => {
   const fishing = { slot: 'fishing' as const, start: Date.parse('2026-10-22T00:00:00Z'), end: Date.parse('2026-10-25T00:00:00Z') };
-  const feed = (id: string) => {
-    const step = nextStep(lines.get(id)!, 2)!;
-    return { [checkKey(step, step.tasks.findIndex((t) => t.kind === 'feed'))]: true };
-  };
-  const team = [owned('droppit', 2, 5), owned('cribbler', 2, 40, feed('cribbler')), owned('glowfly', 2, 40, feed('glowfly')), owned('buddi', 2, 40)];
+  const fed = (id: string) => ({ ...owned(id, 2, 40), grades: { atk: 'C', hp: 'D', def: 'C' } });
+  const team = [owned('droppit', 2, 5), fed('cribbler'), fed('glowfly'), owned('buddi', 2, 40)];
   assert.deepEqual(candidatesFor(fishing, team, lines).map((c) => c.tatari.uid), ['cribbler', 'glowfly', 'droppit']);
   assert.deepEqual(suggestPlan([fishing], team, lines, 2).get(windowKey(fishing)), ['cribbler', 'glowfly']);
 });
@@ -83,4 +82,52 @@ test('copy costs match the known cumulative totals', () => {
 test('minimum stars for a tier come from that line\'s star gates', () => {
   const line = lines.get('manteeny')!; // T2 needs 6★, T3 18★, T4 36★
   assert.deepEqual([1, 2, 3, 4].map((t) => minStarsForTier(line, t)), [0, 6, 18, 36]);
+});
+
+test('feeding bars match the in-game screenshots (stages 0–6)', () => {
+  assert.deepEqual(FEED_STAGES.slice(0, 7).map((s) => s.bar), [100, 180, 260, 340, 440, 540, 640]);
+  // Ospisces at 1/260 (stage 2) needs the rest of that bar to reach stage 3.
+  assert.equal(pointsToStage(2, 1, 3), 259);
+  // Pandaroot at 58/180 (stage 1): 122 to finish, then 260 more.
+  assert.equal(pointsToStage(1, 58, 3), 382);
+  assert.equal(pointsToStage(4, 0, 3), 0);
+});
+
+test('feeding stages are capped by stars and by blue rarity', () => {
+  const purple = lines.get('manteeny')!;
+  assert.equal(maxFeedStage(purple, 1), 2); // stage 3 needs 2★
+  assert.equal(maxFeedStage(purple, 22), 7); // stage 8 needs 24★
+  const blue = (data as GameData).lines.find((l) => l.forms.length === 2)!;
+  assert.equal(maxFeedStage(blue, 84), 10);
+});
+
+test('feed tasks: stage 3 for "raise stats 3 times", Rating B for "B quality"', () => {
+  const t = owned('manteeny', 3, 22);
+  assert.equal(feedTaskMet({ ...t, grades: { atk: 'D', hp: 'D', def: 'C' } }, { kind: 'feed', text: '', grade: 'stats3' }), false);
+  assert.equal(feedTaskMet({ ...t, grades: { atk: 'C', hp: 'B', def: 'B' } }, { kind: 'feed', text: '', grade: 'stats3' }), true);
+  assert.equal(feedTaskMet({ ...t, grades: { atk: 'C', hp: 'B', def: 'B' } }, { kind: 'feed', text: '', grade: 'B' }), false);
+  assert.equal(feedTaskMet({ ...t, grades: { atk: 'B', hp: 'A', def: 'B' } }, { kind: 'feed', text: '', grade: 'B' }), true);
+});
+
+test('Rating is the lowest stat grade; B rating needs one grade per missing letter', () => {
+  // Serrabloom: C / B / B at feeding stage 6.
+  assert.equal(ratingOf({ atk: 'C', hp: 'B', def: 'B' }), 'C');
+  assert.equal(upgradesToGrade({ atk: 'C', hp: 'B', def: 'B' }, 'B'), 1);
+  // Slobberlama: D / D / E at stage 0 needs at least 2 + 2 + 3 = 7 upgrades.
+  assert.equal(ratingOf({ atk: 'D', hp: 'D', def: 'E' }), 'E');
+  assert.equal(upgradesToGrade({ atk: 'D', hp: 'D', def: 'E' }, 'B'), 7);
+});
+
+test('feeding stage can be read from the three grades (all eight screenshots)', () => {
+  const seen: [string, StatGrades, number][] = [
+    ['Slobberlama', { atk: 'D', hp: 'D', def: 'E' }, 0],
+    ['Pandaroot', { atk: 'D', hp: 'D', def: 'D' }, 1],
+    ['Ospisces', { atk: 'D', hp: 'D', def: 'C' }, 2],
+    ['Dreadclaw', { atk: 'C', hp: 'D', def: 'C' }, 3],
+    ['Cheerspring', { atk: 'C', hp: 'C', def: 'C' }, 4],
+    ['Rockwu', { atk: 'C', hp: 'C', def: 'B' }, 5],
+    ['Serrabloom', { atk: 'C', hp: 'B', def: 'B' }, 6],
+    ['Tideon', { atk: 'A', hp: 'C', def: 'C' }, 6],
+  ];
+  for (const [name, grades, stage] of seen) assert.equal(stageFromGrades(grades), stage, name);
 });

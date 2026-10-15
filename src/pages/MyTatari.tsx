@@ -3,11 +3,13 @@ import { SlidersHorizontal } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { ReadyChip, StarsChip } from '../components/bits';
 import { ElementFilter, ElementIcon } from '../components/ElementFilter';
+import { FeedingControl } from '../components/Feeding';
 import { StarControl } from '../components/Stars';
+import { GRADE_STYLE } from '../data/feeding';
 import { ELEMENT_STYLE, formName, game } from '../data/game';
 import type { Element, Line } from '../data/types';
 import { starFloor } from '../logic/labels';
-import { readiness, type OwnedTatari } from '../logic/plan';
+import { rating, readiness, type OwnedTatari } from '../logic/plan';
 import { blankTatari, useStore } from '../state/store';
 import { useEditTatari } from '../state/useEditTatari';
 
@@ -85,6 +87,7 @@ function TatariCard({ line, t, isSetUp }: { line: Line; t: OwnedTatari; isSetUp:
   const edit = useEditTatari();
   const r = readiness(t, line);
   const name = formName(line, t.tier);
+  const grade = rating(t);
 
   return (
     <Card className={`flex flex-col gap-0 overflow-hidden p-0 ${isSetUp ? '' : 'opacity-80 hover:opacity-100'}`}>
@@ -99,6 +102,11 @@ function TatariCard({ line, t, isSetUp }: { line: Line; t: OwnedTatari; isSetUp:
         <span className="absolute top-2 left-2">
           <ElementIcon element={line.element} />
         </span>
+        {grade && (
+          <span className={`absolute bottom-2 left-2 grid size-7 place-items-center rounded-md text-sm font-black shadow ${GRADE_STYLE[grade]}`} aria-label={`Rating ${grade}`}>
+            {grade}
+          </span>
+        )}
         <span className="absolute top-2 right-2 rounded-md bg-black/45 px-1.5 py-0.5 text-xs font-bold text-white">T{t.tier}</span>
       </button>
 
@@ -125,7 +133,9 @@ function TatariCard({ line, t, isSetUp }: { line: Line; t: OwnedTatari; isSetUp:
           ))}
         </div>
 
-        <StarControl value={t.stars} onChange={(stars) => update(line.id, { stars })} {...starFloor(line, t.tier, name)} />
+        <StarControl value={t.stars} onChange={(stars) => update(line.id, { stars })} {...starFloor(line, t, name)} />
+
+        <FeedingControl line={line} t={t} onChange={(patch) => update(line.id, patch)} />
 
         <div className="mt-auto flex min-h-6 flex-wrap items-center justify-center gap-1.5">
           {r && (r.ready ? <ReadyChip /> : r.starsMissing > 0 ? <StarsChip missing={r.starsMissing} /> : null)}

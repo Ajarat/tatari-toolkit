@@ -3,7 +3,7 @@ import { CalendarPlus, PawPrint, Pin, PinOff, Sparkles } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { CheckRow, NeedsChip, ReadyChip, SectionTitle, StarsChip, TatariAvatar } from '../components/bits';
-import { eventName, optionLabel } from '../logic/labels';
+import { eventName, feedProgress, optionLabel } from '../logic/labels';
 import { StarRow } from '../components/Stars';
 import { useEditTatari } from '../state/useEditTatari';
 import { EVENTS } from '../data/events';
@@ -190,11 +190,17 @@ function CandidateRow({ c, w, suggested }: { c: Candidate; w?: EventWindow; sugg
 
       {(isPlanned || suggested) && (
         <div className="ml-13 flex flex-col gap-0.5 text-sm">
-          {r.unmet.map(({ task, index }) => (
-            <CheckRow key={index} checked={false} onChange={(v) => toggleCheck(tatari.uid, checkKey(r.step, index), v)}>
-              Before it starts: {task.kind === 'feed' ? feedLabel(task) : task.text}
-            </CheckRow>
-          ))}
+          {r.unmet.map(({ task, index }) =>
+            task.kind === 'feed' ? (
+              <p key={index} className="py-1 pl-7.5">
+                Before it starts: {feedLabel(task)} <span className="text-muted">· {feedProgress(tatari, task)}</span>
+              </p>
+            ) : (
+              <CheckRow key={index} checked={false} onChange={(v) => toggleCheck(tatari.uid, checkKey(r.step, index), v)}>
+                Before it starts: {task.text}
+              </CheckRow>
+            ),
+          )}
           {spend && (
             <p className="flex items-center gap-2 text-muted">
               <CalendarPlus size={14} className="shrink-0" /> In trial: spend {optionLabel(spend)}

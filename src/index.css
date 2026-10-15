@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+body {
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Room for the phone's home indicator under the bottom tab bar. */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

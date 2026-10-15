@@ -1,0 +1,4642 @@
+{
+ "lines": [
+  {
+   "id": "ashlarva",
+   "element": "Fire",
+   "forms": [
+    "Ashlarva",
+    "Firecoil",
+    "Charflutter",
+    "Chrysolaria"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Ashlarva",
+     "to": "Firecoil",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Use Rubblet and Ashlarva on the same team to clear 10 stages."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Firecoil",
+     "to": "Charflutter",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Firecoil to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Charflutter",
+     "to": "Chrysolaria",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 20,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Fire Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "blowfin",
+   "element": "Fire",
+   "forms": [
+    "Blowfin",
+    "Puffbelly",
+    "Chefugu",
+    "Pyromaki"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Blowfin",
+     "to": "Puffbelly",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Craft 3 Bentos"
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 3,
+     "from": "Puffbelly",
+     "to": "Chefugu",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Use x5,000 energy cans",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Chefugu",
+     "to": "Pyromaki",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed to B quality",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use x20,000 energy cans",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Craft 24 Bentos"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "blueflick",
+   "element": "Fire",
+   "forms": [
+    "Blueflick",
+    "Ignisnap",
+    "Azurion",
+    "Newflamander"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Blueflick",
+     "to": "Ignisnap",
+     "stars": 3,
+     "starsText": "Reach 3 bronze stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Shoot 1,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 1000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Ignisnap",
+     "to": "Azurion",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Ignisnap to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon (use x2000 boards) Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Azurion",
+     "to": "Newflamander",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 20,000 energy drinks in Island Gold Rush.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own three 24-Star Fire Tataris."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "budboo",
+   "element": "Grass",
+   "forms": [
+    "Budboo",
+    "Snapshade",
+    "Thornwisp",
+    "Chomperwraith"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Budboo",
+     "to": "Snapshade",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Purchase any 10 buildings."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Snapshade",
+     "to": "Thornwisp",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Snapshade to increase its stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Thornwisp",
+     "to": "Chomperwraith",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Thornwisp any 120 food items."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "buddi",
+   "element": "Grass",
+   "forms": [
+    "Buddi",
+    "Sunfleur",
+    "Solaflora",
+    "Heliabloom"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Buddi",
+     "to": "Sunfleur",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Get 10 pinballs into the star bag.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Sunfleur",
+     "to": "Solaflora",
+     "stars": 12,
+     "starsText": "Reach 6 silver stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Sunfleur to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Solaflora",
+     "to": "Heliabloom",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Purchase any 20 buildings. Bring your Camp to life!"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "cactobud",
+   "element": "Grass",
+   "forms": [
+    "Cactobud",
+    "Cactobloom",
+    "Cactoczar"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Cactobud",
+     "to": "Cactobloom",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Bring Cactobud to Horde Invasion 3 times. Hug a Zobo today!",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Cactobloom",
+     "to": "Cactoczar",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Cactobloom to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "capywata",
+   "element": "Water",
+   "forms": [
+    "Capywata",
+    "Capypapa"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Capywata",
+     "to": "Capypapa",
+     "stars": 4,
+     "starsText": "Reach 4 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 4 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "cheerling",
+   "element": "Lightning",
+   "forms": [
+    "Cheerling",
+    "Cheerlet",
+    "Cheerspring",
+    "Cheerstella"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Cheerling",
+     "to": "Cheerlet",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Land 10 pinballs in the Star Slot.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Cheerlet",
+     "to": "Cheerspring",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Cheerlet to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Cheerspring",
+     "to": "Cheerstella",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Marathon Party (Use x6000 skateboards) or Fishing Contest (Use x6000 Fishing Rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Cheerspring x15 Tempura Plates."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "cindermunk",
+   "element": "Fire",
+   "forms": [
+    "Cindermunk",
+    "Embertail"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Cindermunk",
+     "to": "Embertail",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "clucky",
+   "element": "Grass",
+   "forms": [
+    "Clucky",
+    "Cluckeroo"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Clucky",
+     "to": "Cluckeroo",
+     "stars": 2,
+     "starsText": "Reach 2 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 2 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "cribbler",
+   "element": "Water",
+   "forms": [
+    "Cribbler",
+    "Clawzor",
+    "Dreadclaw",
+    "Cribking"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Cribbler",
+     "to": "Clawzor",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Clawzor",
+     "to": "Dreadclaw",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Clawzor to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Dreadclaw",
+     "to": "Cribking",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 50 more Tatari Wishboxes."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "dewgrub",
+   "element": "Water",
+   "forms": [
+    "Dewgrub",
+    "Ripplewing",
+    "Waveflutter"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Dewgrub",
+     "to": "Ripplewing",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Clear 10 stages with Dewgrub and Ashlarva together."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Ripplewing",
+     "to": "Waveflutter",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Ripplewing to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards)",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "dozy",
+   "element": "Rock",
+   "forms": [
+    "Dozy",
+    "Snoozebo"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Dozy",
+     "to": "Snoozebo",
+     "stars": 4,
+     "starsText": "Reach 4 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 4 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "drilleroo",
+   "element": "Rock",
+   "forms": [
+    "Drilleroo",
+    "Cragolin",
+    "Borelord"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Drilleroo",
+     "to": "Cragolin",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Drilleroo Gem Taco x3."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Cragolin",
+     "to": "Borelord",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Cragolin to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use fertilizer x4200).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "droppit",
+   "element": "Water",
+   "forms": [
+    "Droppit",
+    "Bubbit",
+    "Tideon",
+    "Haplysia"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Droppit",
+     "to": "Bubbit",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Obtain Droppit x1 to have a bunny party!"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Bubbit",
+     "to": "Tideon",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Bubbit to increase stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards)",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Tideon",
+     "to": "Haplysia",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 60 cards from card packs."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "dumbopus",
+   "element": "Water",
+   "forms": [
+    "Dumbopus",
+    "Dazopus",
+    "Fishopus"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Dumbopus",
+     "to": "Dazopus",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "In Tatari Catcher, capture 40 Tatari."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Dazopus",
+     "to": "Fishopus",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Dazopus to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Use 2,000 fishing rods or 200,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 200000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "flameow",
+   "element": "Fire",
+   "forms": [
+    "Flameow",
+    "Nekoflare",
+    "Silversear"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Flameow",
+     "to": "Nekoflare",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Clear 10 stages with Flameow and Kittazap together."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Nekoflare",
+     "to": "Silversear",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Nekoflare to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "fluffle",
+   "element": "Lightning",
+   "forms": [
+    "Fluffle",
+    "Nimbuzzy",
+    "Galewether",
+    "Cosmoram"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Fluffle",
+     "to": "Nimbuzzy",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Fluffle 3 Cotton Candies."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Nimbuzzy",
+     "to": "Galewether",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Nimbuzzy to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Galewether",
+     "to": "Cosmoram",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x6000 boards) or Fishing Contest (use x6000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed 60 Fluff Candy."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "frostnip",
+   "element": "Water",
+   "forms": [
+    "Frostnip",
+    "Frostpaw",
+    "Frostique",
+    "Frostluna"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Frostnip",
+     "to": "Frostpaw",
+     "stars": 3,
+     "starsText": "Reach 3 bronze stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Defeat 300 Zobos while clearing stages."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Frostpaw",
+     "to": "Frostique",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Frostpaw to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "state",
+       "text": "Clear Chapter 8, Stage 80."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Frostique",
+     "to": "Frostluna",
+     "stars": 24,
+     "starsText": "Reach 6 silver moons",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x6000 fishing rods) or Snowboard Sprint/Marathon Party (use x6000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-Star Water Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "frugling",
+   "element": "Grass",
+   "forms": [
+    "Frugling",
+    "Frugatoad",
+    "Frugagon",
+    "Frugantuan"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Frugling",
+     "to": "Frugatoad",
+     "stars": 3,
+     "starsText": "Reach 3 bronze stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Shoot 400 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 400,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Frugatoad",
+     "to": "Frugagon",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Frugatoad to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "state",
+       "text": "Reach difficulty 12 in any boss challenge."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Frugagon",
+     "to": "Frugantuan",
+     "stars": 24,
+     "starsText": "Reach 6 silver moons",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 30 more Tatari Wishboxes."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "fumekit",
+   "element": "Fire",
+   "forms": [
+    "Fumekit",
+    "Sulfunk",
+    "Magmusk"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Fumekit",
+     "to": "Sulfunk",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Fumekit Cookie x30."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Sulfunk",
+     "to": "Magmusk",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Sulfunk to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "funglet",
+   "element": "Grass",
+   "forms": [
+    "Funglet",
+    "Trippet",
+    "Hyphoria",
+    "Ecstamira"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Funglet",
+     "to": "Trippet",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Log in for 2 days in a row."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Trippet",
+     "to": "Hyphoria",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Trippet to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Hyphoria",
+     "to": "Ecstamira",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Have 5 Grass badges."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "gibber",
+   "element": "Rock",
+   "forms": [
+    "Gibber",
+    "Turtuff",
+    "Rockshell",
+    "Terraton"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Gibber",
+     "to": "Turtuff",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Obtain 5 Shields via pinball."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Turtuff",
+     "to": "Rockshell",
+     "stars": 12,
+     "starsText": "Reach 6 silver stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Turtuff to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Rockshell",
+     "to": "Terraton",
+     "stars": 30,
+     "starsText": "Reach 30 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 120 treasure) or Cozy Farm (use x7200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 5 Rock Badges."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "glowfly",
+   "element": "Lightning",
+   "forms": [
+    "Glowfly",
+    "Phosflare",
+    "Glimmerwing",
+    "Luminastra"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Glowfly",
+     "to": "Phosflare",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Hit Star Slot x20"
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 3,
+     "from": "Phosflare",
+     "to": "Glimmerwing",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "2,000 rods / 2,000 boards",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Glimmerwing",
+     "to": "Luminastra",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed to B quality",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "6k boards / 6k rods",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 15 Glitter Fruit"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "goonbug",
+   "element": "Grass",
+   "forms": [
+    "Goonbug",
+    "Capobeetle",
+    "Donscarab",
+    "Beetleknight"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Goonbug",
+     "to": "Capobeetle",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Capobeetle",
+     "to": "Donscarab",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Capobeetle to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Donscarab",
+     "to": "Beetleknight",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Donscarab Bamboo Stew x15."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "gopher",
+   "element": "Rock",
+   "forms": [
+    "Gopher",
+    "Watchroo",
+    "Bastogard",
+    "Cratzar"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Gopher",
+     "to": "Watchroo",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Obtain another Gopher x1"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Watchroo",
+     "to": "Bastogard",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Watchroo to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Bastogard",
+     "to": "Cratzar",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 120 treasure) or Cozy Farm (use x7200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 50 more Tatari Wishboxes."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "hootlet",
+   "element": "Grass",
+   "forms": [
+    "Hootlet",
+    "Tikowl",
+    "Chronerva",
+    "Hypnostrix"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Hootlet",
+     "to": "Tikowl",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Log in for 2 days in a row."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Tikowl",
+     "to": "Chronerva",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Tikowl to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Chronerva",
+     "to": "Hypnostrix",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-Star Grass Tatari x3."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "humbug",
+   "element": "Rock",
+   "forms": [
+    "Humbug",
+    "Humbleetle",
+    "Zenscarab",
+    "Hierotyrus"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Humbug",
+     "to": "Humbleetle",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Land 10 pinballs in the Star Slot.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Humbleetle",
+     "to": "Zenscarab",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Use x5,000 energy cans",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Zenscarab",
+     "to": "Hierotyrus",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed to B quality",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "120 treasure / 7.2k fertilizer",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Catch 200 in Tatari Catcher"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "joeyo",
+   "element": "Rock",
+   "forms": [
+    "Joeyo",
+    "Puncharoo",
+    "Kangachamp",
+    "Kaiseroo"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Joeyo",
+     "to": "Puncharoo",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Defeat 30 enemies in Island Goldrush. Time for some courage!",
+       "options": [
+        {
+         "slot": "gold_rush"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Puncharoo",
+     "to": "Kangachamp",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Puncharoo to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Kangachamp",
+     "to": "Kaiseroo",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 120 treasure) or Cozy Farm (use 7,200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "Defeat 400 enemies in Island Goldrush.",
+       "options": [
+        {
+         "slot": "gold_rush"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "kittazap",
+   "element": "Lightning",
+   "forms": [
+    "Kittazap",
+    "Nekowatt",
+    "Voltazar"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Kittazap",
+     "to": "Nekowatt",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Shoot 2,400 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 2400,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Nekowatt",
+     "to": "Voltazar",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Nekowatt to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer)",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "lollama",
+   "element": "Grass",
+   "forms": [
+    "Lollama",
+    "Slobberlama",
+    "Ptooielama"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Lollama",
+     "to": "Slobberlama",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Bring Lollama to Horde Invasion 3 times. Drown those Zobos in slobber!",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Slobberlama",
+     "to": "Ptooielama",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Slobberlama to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "lullelly",
+   "element": "Water",
+   "forms": [
+    "Lullelly",
+    "Yawnelly",
+    "Souverelle",
+    "Somnrayna"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Lullelly",
+     "to": "Yawnelly",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Log in for 2 consecutive days."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Yawnelly",
+     "to": "Souverelle",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Yawnelly to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Souverelle",
+     "to": "Somnrayna",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed to B quality",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 5 Water Badges"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "manteeny",
+   "element": "Grass",
+   "forms": [
+    "Manteeny",
+    "Stalkerix",
+    "Serrabloom",
+    "Orchitoria"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Manteeny",
+     "to": "Stalkerix",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Use Manteeny to clear 20 stages."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Stalkerix",
+     "to": "Serrabloom",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Stalkerix to increase stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Serrabloom",
+     "to": "Orchitoria",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Grass Tatari x3."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "maskfry",
+   "element": "Water",
+   "forms": [
+    "Maskfry",
+    "Ospisces",
+    "Armorjaw",
+    "Dagondeep"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Maskfry",
+     "to": "Ospisces",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Ospisces",
+     "to": "Armorjaw",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Ospisces to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Use 2,000 fishing rods or 200,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 200000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Armorjaw",
+     "to": "Dagondeep",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 60 cards from card packs."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "momopo",
+   "element": "Rock",
+   "forms": [
+    "Momopo",
+    "Lulupo",
+    "Lilypo",
+    "Gemmapo"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Momopo",
+     "to": "Lulupo",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed 10 Rock Sugar Rings."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Lulupo",
+     "to": "Lilypo",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Lulupo to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Lilypo",
+     "to": "Gemmapo",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Dig 120 treasures in Treasure Hunt or use x7200 fertilizer in Cozy Farm.",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 60 cards from card packs."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "mudrump",
+   "element": "Rock",
+   "forms": [
+    "Mudrump",
+    "Rockhog"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Mudrump",
+     "to": "Rockhog",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "pandaroo",
+   "element": "Grass",
+   "forms": [
+    "Pandaroo",
+    "Pandaroot",
+    "Pandarrior",
+    "Pandagrand"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Pandaroo",
+     "to": "Pandaroot",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Pandaroo 3 Sunshine Salads."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Pandaroot",
+     "to": "Pandarrior",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Pandaroot to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Pandarrior",
+     "to": "Pandagrand",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Pandarrior Bambo Stew x15"
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "poakie",
+   "element": "Fire",
+   "forms": [
+    "Poakie",
+    "Sizzribb",
+    "Lickflicker",
+    "Ignitoad"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Poakie",
+     "to": "Sizzribb",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Poakie 10 Spicy Sodas."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Sizzribb",
+     "to": "Lickflicker",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Sizzribb to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Goldrush, use Energy Drink x5,000.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Lickflicker",
+     "to": "Ignitoad",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use Energy Drink x20,000.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Lickflicker 15 Volcano Pizzas."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "punchimp",
+   "element": "Rock",
+   "forms": [
+    "Punchimp",
+    "Rockfu",
+    "Rockong",
+    "Rockwu"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Punchimp",
+     "to": "Rockfu",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Obtain another Punchimp x1"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Rockfu",
+     "to": "Rockong",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Rockfu to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Rockong",
+     "to": "Rockwu",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 120 treasure) or Cozy Farm (use x7200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Rock Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "pyropup",
+   "element": "Fire",
+   "forms": [
+    "Pyropup",
+    "Pyrohound",
+    "Hellhound",
+    "Pyrodaemon"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Pyropup",
+     "to": "Pyrohound",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Pyropup 30 cookies."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Pyrohound",
+     "to": "Hellhound",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Pyrohound to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Hellhound",
+     "to": "Pyrodaemon",
+     "stars": 30,
+     "starsText": "Reach 30 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 20,000 energy drinks in Island Gold Rush.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed Hellhound 15 Volcano Pizzas."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "rubblet",
+   "element": "Rock",
+   "forms": [
+    "Rubblet",
+    "Cobbledon",
+    "Rockzilla",
+    "Meteorax"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Rubblet",
+     "to": "Cobbledon",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Kill 300 Zobos while clearing stages. Show them the power of Azure Flare!"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Cobbledon",
+     "to": "Rockzilla",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Cobbledon to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Rockzilla",
+     "to": "Meteorax",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B Quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Dig 120 treasures in Treasure Hunt or use x7200 fertilizer in Cozy Farm.",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "In Horde Invasion, upgrade Rockzilla to Lvl 7 or above for a total of 5 time(s).",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "sackling",
+   "element": "Grass",
+   "forms": [
+    "Sackling",
+    "Jarachnid",
+    "Terracrawler",
+    "Weaverfang"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Sackling",
+     "to": "Jarachnid",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Get 10 pinballs into the star bag.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Jarachnid",
+     "to": "Terracrawler",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Jarachnid to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 15,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 15000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Terracrawler",
+     "to": "Weaverfang",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 45,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 45000,
+         "unit": "pinballs"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Grass Tatari x4."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "sealing",
+   "element": "Water",
+   "forms": [
+    "Sealing",
+    "Sealoon",
+    "Seaswirl",
+    "Sealord"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Sealing",
+     "to": "Sealoon",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Get 10 pinballs into the star bag.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Sealoon",
+     "to": "Seaswirl",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Sealoon to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Seaswirl",
+     "to": "Sealord",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "Shoot 40,000 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 40000,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "shardsnail",
+   "element": "Rock",
+   "forms": [
+    "Shardsnail",
+    "Gemsnail",
+    "Jewelsnail",
+    "Crystalsnail"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Shardsnail",
+     "to": "Gemsnail",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Obtain 5 shield via pinball."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Gemsnail",
+     "to": "Jewelsnail",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Gemsnail to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush, use energy drinks x5,000.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Jewelsnail",
+     "to": "Crystalsnail",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 120 treasure) or Cozy Farm (use x7200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 7200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 120,
+         "unit": "treasure"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 50 more Tatari Wishboxes."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "shellshy",
+   "element": "Water",
+   "forms": [
+    "Shellshy",
+    "Boldclaw"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Shellshy",
+     "to": "Boldclaw",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "shrimpyro",
+   "element": "Fire",
+   "forms": [
+    "Shrimpyro",
+    "Pyroprawn",
+    "Pyroclobster",
+    "Pyroviathan"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Shrimpyro",
+     "to": "Pyroprawn",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Obtain 800 Energy Drinks via pinball.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 800,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Pyroprawn",
+     "to": "Pyroclobster",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Pyroprawn to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Pyroclobster",
+     "to": "Pyroviathan",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use energy drink x20,000",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "In horde invasion, upgrade Pyroclobster to Lvl 7 or above for a total of 5 times.",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "skinklet",
+   "element": "Water",
+   "forms": [
+    "Skinklet",
+    "Skinkoon",
+    "Ninjaguana",
+    "Hychroma"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Skinklet",
+     "to": "Skinkoon",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Skinkoon",
+     "to": "Ninjaguana",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Skinkoon to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Fishing Contest (use x2000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Ninjaguana",
+     "to": "Hychroma",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 6,000 fishing rods or 600,000 Gold Hunt Coins.",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "zobo_shooter",
+         "amount": 600000,
+         "unit": "Gold Hunt Coins"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Obtain 50 more Tatari Wishboxes."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "solpear",
+   "element": "Grass",
+   "forms": [
+    "Solpear",
+    "Pearpair"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Solpear",
+     "to": "Pearpair",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "souphog",
+   "element": "Fire",
+   "forms": [
+    "Souphog",
+    "Grillhog",
+    "Hothog",
+    "Searhog"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Souphog",
+     "to": "Grillhog",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Souphog Lava Ramen x1, Spicy Soda x1, and Cookie x1"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Grillhog",
+     "to": "Hothog",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Grillhog to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Hothog",
+     "to": "Searhog",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 20,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed 60 Lava Ramen."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "sparkeet",
+   "element": "Lightning",
+   "forms": [
+    "Sparkeet",
+    "Buzzbeak",
+    "Toucanzam"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Sparkeet",
+     "to": "Buzzbeak",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Sparkeet Bolt Pudding x10"
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Buzzbeak",
+     "to": "Toucanzam",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Buzzbeak to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x2400 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 2400,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "sparkit",
+   "element": "Fire",
+   "forms": [
+    "Sparkit",
+    "Firefox",
+    "Flarevix",
+    "Phantifox"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Sparkit",
+     "to": "Firefox",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Trial: Shoot 2,400 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 2400,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Firefox",
+     "to": "Flarevix",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise stats 3 times",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "2,000 boards / 4,000 fertilizer",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Flarevix",
+     "to": "Phantifox",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 20,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Fire Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "sparkrow",
+   "element": "Fire",
+   "forms": [
+    "Sparkrow",
+    "Scorchwing"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Sparkrow",
+     "to": "Scorchwing",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "taptail",
+   "element": "Rock",
+   "forms": [
+    "Taptail",
+    "Rattlecoil",
+    "Clangnaga"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Taptail",
+     "to": "Rattlecoil",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Kill 300 Zobos in map stages."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Rattlecoil",
+     "to": "Clangnaga",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Rattlecoil to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "In Island Gold Rush use 5,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 5000,
+         "unit": "energy drinks"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": true
+  },
+  {
+   "id": "tindercub",
+   "element": "Fire",
+   "forms": [
+    "Tindercub",
+    "Kitjitsu",
+    "Taiglow",
+    "Saberheart"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Tindercub",
+     "to": "Kitjitsu",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Use Tindercub to clear 20 stages."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Kitjitsu",
+     "to": "Taiglow",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Kitjitsu to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x2000 boards) or Cozy Farm (use x4000 fertilizer).",
+       "options": [
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        },
+        {
+         "slot": "cozy_farm",
+         "amount": 4000,
+         "unit": "fertilizer"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Taiglow",
+     "to": "Saberheart",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Use 20,000 energy drinks.",
+       "options": [
+        {
+         "slot": "gold_rush",
+         "amount": 20000,
+         "unit": "energy drinks"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "Initiate or join 20 rally attacks in Island Goldrush.",
+       "options": [
+        {
+         "slot": "gold_rush"
+        }
+       ]
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "voltfawn",
+   "element": "Lightning",
+   "forms": [
+    "Voltfawn",
+    "Sparkdoe",
+    "Zapantler",
+    "Magnedart"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Voltfawn",
+     "to": "Sparkdoe",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Kill 300 zobos."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Sparkdoe",
+     "to": "Zapantler",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Sparkdoe to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Zapantler",
+     "to": "Magnedart",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x6000 fishing rods) or Snowboard Sprint/Marathon Party (use x6000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "progress",
+       "text": "Feed 15 Tempura Plates."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "voltkit",
+   "element": "Lightning",
+   "forms": [
+    "Voltkit",
+    "Voltling",
+    "Voltverine",
+    "Voltreaver"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Voltkit",
+     "to": "Voltling",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Shoot 2,400 pinballs.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 2400,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Voltling",
+     "to": "Voltverine",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Voltling to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Voltverine",
+     "to": "Voltreaver",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Marathon Party (use x6000 skateboards) or Fishing Contest (use x6000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 5 Lightning Badges."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "waddledo",
+   "element": "Water",
+   "forms": [
+    "Waddledo",
+    "Swaystroll",
+    "Stoodbeak",
+    "Glideflip"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Waddledo",
+     "to": "Swaystroll",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Feed Waddledo 3 Tornado Smoothies."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Swaystroll",
+     "to": "Stoodbeak",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Swaystroll to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x2000 fishing rods) or Snowboard Sprint/Marathon Party (use x2000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 2000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 2000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Stoodbeak",
+     "to": "Glideflip",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x6000 fishing rods) or Snowboard Sprint/Marathon Party (use x6000 boards).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "In Horde Invasion, upgrade Stoodbeak to Lvl 7 or above for a total of 5 time(s).",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "wobbler",
+   "element": "Lightning",
+   "forms": [
+    "Wobbler",
+    "Boltskipper"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Wobbler",
+     "to": "Boltskipper",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 6 stars."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "zaplet",
+   "element": "Lightning",
+   "forms": [
+    "Zaplet",
+    "Synthhog",
+    "Sonarbat",
+    "Umbraveil"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Zaplet",
+     "to": "Synthhog",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Synthhog",
+     "to": "Sonarbat",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Synthhog to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Fishing Contest (use x6000 fishing rods) or Snowboard Sprint/Marathon Party (use x6000 boards)",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Sonarbat",
+     "to": "Umbraveil",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Raise this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Marathon Party (use 6,000 skateboards) or Fishing Contest (use 6,000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "event",
+       "text": "In Horde Invasion, upgrade Sonarbat to level 7 or above 5 times.",
+       "options": [
+        {
+         "slot": "horde"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "zappur",
+   "element": "Lightning",
+   "forms": [
+    "Zappur",
+    "Electroar",
+    "Blitzmane",
+    "Stormlion"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Zappur",
+     "to": "Electroar",
+     "stars": 6,
+     "starsText": "Reach 6 bronze stars",
+     "tasks": [
+      {
+       "kind": "event",
+       "text": "Get 10 pinballs into the star bag.",
+       "options": [
+        {
+         "slot": "pinball",
+         "amount": 10,
+         "unit": "pinballs"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Electroar",
+     "to": "Blitzmane",
+     "stars": 12,
+     "starsText": "Reach 6 silver stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Electroar to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Blitzmane",
+     "to": "Stormlion",
+     "stars": 24,
+     "starsText": "Reach 6 silver moons",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B Quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Marathon Party (use x6000 skateboards) or Fishing Contest (use x6000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-Star Lightning Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "zapuni",
+   "element": "Lightning",
+   "forms": [
+    "Zapuni",
+    "Surgehoof",
+    "Voltmare",
+    "Boltallion"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Zapuni",
+     "to": "Surgehoof",
+     "stars": 6,
+     "starsText": "Reach 6 stars",
+     "tasks": [
+      {
+       "kind": "progress",
+       "text": "Attempt Boss Challenge 10 times."
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 3,
+     "from": "Surgehoof",
+     "to": "Voltmare",
+     "stars": 18,
+     "starsText": "Reach 18 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed Surgehoof to increase stats 3 times.",
+       "grade": "stats3"
+      },
+      {
+       "kind": "event",
+       "text": "Play Treasure Hunt (dig up 70 treasure) or Cozy Farm (use x4200 fertilizer).",
+       "options": [
+        {
+         "slot": "cozy_farm",
+         "amount": 4200,
+         "unit": "fertilizer"
+        },
+        {
+         "slot": "treasure_hunt",
+         "amount": 70,
+         "unit": "treasure"
+        }
+       ]
+      }
+     ],
+     "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Voltmare",
+     "to": "Boltallion",
+     "stars": 36,
+     "starsText": "Reach 36 stars",
+     "tasks": [
+      {
+       "kind": "feed",
+       "text": "Feed this Tatari to B quality.",
+       "grade": "B"
+      },
+      {
+       "kind": "event",
+       "text": "Play Snowboard Sprint/Marathon Party (use x6000 boards) or Fishing Contest (use x6000 fishing rods).",
+       "options": [
+        {
+         "slot": "fishing",
+         "amount": 6000,
+         "unit": "rods"
+        },
+        {
+         "slot": "marathon",
+         "amount": 6000,
+         "unit": "boards"
+        }
+       ]
+      },
+      {
+       "kind": "state",
+       "text": "Own 24-star Lightning Tatari x3."
+      }
+     ],
+     "confidence": "Verified"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "zapup",
+   "element": "Lightning",
+   "forms": [
+    "Zapup",
+    "Zapooch"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Zapup",
+     "to": "Zapooch",
+     "stars": 1,
+     "starsText": "Reach 1 star",
+     "tasks": [
+      {
+       "kind": "state",
+       "text": "Reach 1 star."
+      }
+     ],
+     "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  }
+ ],
+ "source": {
+  "name": "TataDex",
+  "url": "https://tatadex.org/evolutions/",
+  "fetchedAt": "2026-10-15"
+ }
+}

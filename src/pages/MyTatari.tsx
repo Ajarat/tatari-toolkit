@@ -138,7 +138,7 @@ function TatariCard({ line, t, isSetUp }: { line: Line; t: OwnedTatari; isSetUp:
         <FeedingControl line={line} t={t} onChange={(patch) => update(line.id, patch)} />
 
         <div className="mt-auto flex min-h-6 flex-wrap items-center justify-center gap-1.5">
-          {r && (r.ready ? <ReadyChip /> : r.starsMissing > 0 ? <StarsChip missing={r.starsMissing} /> : null)}
+          {r && (r.unknown ? <span className="text-xs text-muted">Trial not known yet</span> : r.ready ? <ReadyChip /> : r.starsMissing > 0 ? <StarsChip missing={r.starsMissing} /> : null)}
           <span className="text-xs tabular-nums text-muted">{t.stars}★</span>
         </div>
 

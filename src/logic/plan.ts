@@ -71,6 +71,8 @@ export const prepTaskMet = (t: OwnedTatari, step: Step, task: Task, index: numbe
 export type Readiness = {
   step: Step;
   starsMissing: number;
+  /** The trial isn't known yet, so it can't be planned or called ready. */
+  unknown: boolean;
   /** Prep tasks not ticked yet, with their index in step.tasks. */
   unmet: { task: Task; index: number }[];
   ready: boolean;
@@ -81,7 +83,8 @@ export function readiness(t: OwnedTatari, line: Line): Readiness | null {
   if (!step) return null;
   const starsMissing = Math.max(0, (step.stars ?? 0) - t.stars);
   const unmet = step.tasks.map((task, index) => ({ task, index })).filter(({ task, index }) => isPrepTask(task) && !prepTaskMet(t, step, task, index));
-  return { step, starsMissing, unmet, ready: starsMissing === 0 && unmet.length === 0 };
+  const unknown = !!step.unknown;
+  return { step, starsMissing, unknown, unmet, ready: !unknown && starsMissing === 0 && unmet.length === 0 };
 }
 
 export type Candidate = { tatari: OwnedTatari; line: Line; r: Readiness };
@@ -105,7 +108,7 @@ export function anytimeCandidates(owned: OwnedTatari[], lines: Map<string, Line>
   for (const t of owned) {
     const line = lines.get(t.lineId);
     const r = line && readiness(t, line);
-    if (r && !stepSlots(r.step)) out.push({ tatari: t, line, r });
+    if (r && !r.unknown && !stepSlots(r.step)) out.push({ tatari: t, line, r });
   }
   return out.sort((a, b) => Number(b.r.ready) - Number(a.r.ready));
 }

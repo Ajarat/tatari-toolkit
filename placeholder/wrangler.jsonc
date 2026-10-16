@@ -1,0 +1,21 @@
+/**
+ * Temporary "coming soon" page for stratari.gg while the app waits on Farlight's fan-work approval.
+ * Separate from the app's Worker (../wrangler.jsonc), which stays on its private workers.dev address.
+ *
+ * Deploy (once stratari.gg is active on the Cloudflare account):
+ *   npx wrangler deploy -c placeholder/wrangler.jsonc
+ *
+ * At launch: move the routes below into ../wrangler.jsonc, deploy the app, then delete this Worker
+ * (npx wrangler delete -c placeholder/wrangler.jsonc) and this folder.
+ */
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "stratari-placeholder",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "assets": { "directory": "./site" },
+  "routes": [
+    { "pattern": "stratari.gg", "custom_domain": true },
+    { "pattern": "www.stratari.gg", "custom_domain": true }
+  ]
+}

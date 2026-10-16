@@ -445,7 +445,8 @@
    "forms": [
     "Cactobud",
     "Cactobloom",
-    "Cactoczar"
+    "Cactoczar",
+    "Unknown T4"
    ],
    "steps": [
     {
@@ -492,9 +493,19 @@
       }
      ],
      "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Cactoczar",
+     "to": "Unknown T4",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "capywata",
@@ -517,6 +528,49 @@
       }
      ],
      "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "cavyzap",
+   "element": "Lightning",
+   "forms": [
+    "Cavyzap",
+    "Hippiehog",
+    "Wheekroller",
+    "Gigagnash"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Cavyzap",
+     "to": "Hippiehog",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 3,
+     "from": "Hippiehog",
+     "to": "Wheekroller",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 4,
+     "from": "Wheekroller",
+     "to": "Gigagnash",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
    "incomplete": false
@@ -770,7 +824,8 @@
    "forms": [
     "Dewgrub",
     "Ripplewing",
-    "Waveflutter"
+    "Waveflutter",
+    "Morphanessa"
    ],
    "steps": [
     {
@@ -817,9 +872,62 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Waveflutter",
+     "to": "Morphanessa",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
+  },
+  {
+   "id": "dolphie",
+   "element": "Water",
+   "forms": [
+    "Dolphie",
+    "Blubbles",
+    "Aquariel",
+    "Irisia"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Dolphie",
+     "to": "Blubbles",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 3,
+     "from": "Blubbles",
+     "to": "Aquariel",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 4,
+     "from": "Aquariel",
+     "to": "Irisia",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    }
+   ],
+   "incomplete": false
   },
   {
    "id": "dozy",
@@ -852,7 +960,8 @@
    "forms": [
     "Drilleroo",
     "Cragolin",
-    "Borelord"
+    "Borelord",
+    "Unknown T4"
    ],
    "steps": [
     {
@@ -899,9 +1008,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Borelord",
+     "to": "Unknown T4",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "droppit",
@@ -1002,7 +1121,8 @@
    "forms": [
     "Dumbopus",
     "Dazopus",
-    "Fishopus"
+    "Fishopus",
+    "Lordopus"
    ],
    "steps": [
     {
@@ -1049,9 +1169,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Fishopus",
+     "to": "Lordopus",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "flameow",
@@ -1059,7 +1189,8 @@
    "forms": [
     "Flameow",
     "Nekoflare",
-    "Silversear"
+    "Silversear",
+    "Unknown T4"
    ],
    "steps": [
     {
@@ -1101,9 +1232,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Silversear",
+     "to": "Unknown T4",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "fluffle",
@@ -1368,7 +1509,8 @@
    "forms": [
     "Fumekit",
     "Sulfunk",
-    "Magmusk"
+    "Magmusk",
+    "Blastniff"
    ],
    "steps": [
     {
@@ -1415,9 +1557,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Magmusk",
+     "to": "Blastniff",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "funglet",
@@ -2136,7 +2288,8 @@
    "forms": [
     "Kittazap",
     "Nekowatt",
-    "Voltazar"
+    "Voltazar",
+    "Unknown T4"
    ],
    "steps": [
     {
@@ -2190,9 +2343,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Voltazar",
+     "to": "Unknown T4",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "lollama",
@@ -2200,7 +2363,8 @@
    "forms": [
     "Lollama",
     "Slobberlama",
-    "Ptooielama"
+    "Ptooielama",
+    "Blechlama"
    ],
    "steps": [
     {
@@ -2247,9 +2411,19 @@
       }
      ],
      "confidence": "Community"
+    },
+    {
+     "toTier": 4,
+     "from": "Ptooielama",
+     "to": "Blechlama",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "lullelly",
@@ -2805,8 +2979,8 @@
    "forms": [
     "Punchimp",
     "Rockfu",
-    "Rockong",
-    "Rockwu"
+    "Rockwu",
+    "Rockong"
    ],
    "steps": [
     {
@@ -2826,7 +3000,7 @@
     {
      "toTier": 3,
      "from": "Rockfu",
-     "to": "Rockong",
+     "to": "Rockwu",
      "stars": 18,
      "starsText": "Reach 18 stars",
      "tasks": [
@@ -2851,8 +3025,8 @@
     },
     {
      "toTier": 4,
-     "from": "Rockong",
-     "to": "Rockwu",
+     "from": "Rockwu",
+     "to": "Rockong",
      "stars": 36,
      "starsText": "Reach 36 stars",
      "tasks": [
@@ -2966,6 +3140,49 @@
       }
      ],
      "confidence": "Community"
+    }
+   ],
+   "incomplete": false
+  },
+  {
+   "id": "ringtail",
+   "element": "Rock",
+   "forms": [
+    "Ringtail",
+    "Rizzler",
+    "Zorrock",
+    "Phantothief"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Ringtail",
+     "to": "Rizzler",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 3,
+     "from": "Rizzler",
+     "to": "Zorrock",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 4,
+     "from": "Zorrock",
+     "to": "Phantothief",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
    "incomplete": false
@@ -3567,6 +3784,49 @@
    "incomplete": false
   },
   {
+   "id": "snowcub",
+   "element": "Water",
+   "forms": [
+    "Snowcub",
+    "Polarpaw",
+    "Blizzgrizz",
+    "Anglerbear"
+   ],
+   "steps": [
+    {
+     "toTier": 2,
+     "from": "Snowcub",
+     "to": "Polarpaw",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 3,
+     "from": "Polarpaw",
+     "to": "Blizzgrizz",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    },
+    {
+     "toTier": 4,
+     "from": "Blizzgrizz",
+     "to": "Anglerbear",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
+    }
+   ],
+   "incomplete": false
+  },
+  {
    "id": "solpear",
    "element": "Grass",
    "forms": [
@@ -3685,7 +3945,8 @@
    "forms": [
     "Sparkeet",
     "Buzzbeak",
-    "Toucanzam"
+    "Toucanzam",
+    "Technocan"
    ],
    "steps": [
     {
@@ -3732,9 +3993,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Toucanzam",
+     "to": "Technocan",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "sparkit",
@@ -3862,7 +4133,8 @@
    "forms": [
     "Taptail",
     "Rattlecoil",
-    "Clangnaga"
+    "Clangnaga",
+    "Dharmadder"
    ],
    "steps": [
     {
@@ -3904,9 +4176,19 @@
       }
      ],
      "confidence": "Verified"
+    },
+    {
+     "toTier": 4,
+     "from": "Clangnaga",
+     "to": "Dharmadder",
+     "stars": null,
+     "starsText": "Star requirement not known yet",
+     "tasks": [],
+     "confidence": "Unknown",
+     "unknown": true
     }
    ],
-   "incomplete": true
+   "incomplete": false
   },
   {
    "id": "tindercub",
@@ -4637,6 +4919,6 @@
  "source": {
   "name": "TataDex",
   "url": "https://tatadex.org/evolutions/",
-  "fetchedAt": "2026-10-15"
+  "fetchedAt": "2026-10-16"
  }
 }

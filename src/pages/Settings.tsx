@@ -31,6 +31,7 @@ export default function Settings() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Select
+              variant="secondary"
               selectedKey={current.slot}
               onSelectionChange={(k) => k && setSchedule({ rotation: anchorFromCurrent(rotation, k as RotatingSlot, current.end) })}
               className="min-w-48 flex-1"
@@ -52,6 +53,7 @@ export default function Settings() {
               </Select.Popover>
             </Select>
             <Select
+              variant="secondary"
               selectedKey={String(current.end)}
               onSelectionChange={(k) => k && setSchedule({ rotation: anchorFromCurrent(rotation, current.slot as RotatingSlot, Number(k)) })}
               className="min-w-48 flex-1"
@@ -87,6 +89,7 @@ export default function Settings() {
             {goldRushNow && ` ${goldRushNow.start <= now ? 'Current' : 'Next'} round: ${fmtDateTime(goldRushNow.start)} – ${fmtDateTime(goldRushNow.end)}.`}
           </p>
           <Select
+            variant="secondary"
             selectedKey={goldRush.anchor ? String(Date.parse(goldRush.anchor)) : 'none'}
             onSelectionChange={(k) =>
               setSchedule({ goldRush: { ...goldRush, anchor: !k || k === 'none' ? null : new Date(Number(k)).toISOString() } })

@@ -90,9 +90,14 @@ function EditorBody({ lineId }: { lineId: string }) {
             <SectionTitle>
               Next: {r.step.to} (T{r.step.toTier})
             </SectionTitle>
+            {r.unknown && (
+              <p className="text-sm text-muted">
+                {r.step.to} is in the game, but its star requirement and trial haven't been found yet. If you know them, they can be added.
+              </p>
+            )}
             <div className="flex flex-wrap items-center gap-1.5">
               {r.ready ? <ReadyChip /> : r.starsMissing > 0 && <StarsChip missing={r.starsMissing} />}
-              {r.step.confidence !== 'Verified' && (
+              {!r.unknown && r.step.confidence !== 'Verified' && (
                 <Chip size="sm" variant="soft">
                   <Chip.Label>Trial data: {r.step.confidence.toLowerCase() || 'unverified'}</Chip.Label>
                 </Chip>
@@ -124,13 +129,15 @@ function EditorBody({ lineId }: { lineId: string }) {
                 ),
               )}
             </div>
-            <p className="text-sm text-muted">
-              {next.length
-                ? `Next chances: ${next.map((w) => `${eventName(w.slot)} ${fmtDate(w.start)}`).join(' · ')}`
-                : usesGoldRush
-                  ? 'Needs Gold Rush. Set its schedule in Settings to see dates.'
-                  : 'Can be done any time.'}
-            </p>
+            {!r.unknown && (
+              <p className="text-sm text-muted">
+                {next.length
+                  ? `Next chances: ${next.map((w) => `${eventName(w.slot)} ${fmtDate(w.start)}`).join(' · ')}`
+                  : usesGoldRush
+                    ? 'Needs Gold Rush. Set its schedule in Settings to see dates.'
+                    : 'Can be done any time.'}
+              </p>
+            )}
           </section>
         ) : (
           <p className="text-sm text-muted">Fully evolved.</p>

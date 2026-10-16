@@ -1,0 +1,21 @@
+/**
+ * Cloudflare Workers config for Stratari. The app is a static build (dist/) with no server code,
+ * so Cloudflare just serves the files.
+ * Docs: https://developers.cloudflare.com/workers/static-assets/
+ *
+ * Deploys happen automatically when the GitHub repo is connected in the Cloudflare dashboard
+ * (Workers & Pages → Create → Import a repository; build command `npm run build`).
+ * To deploy by hand: `npm run deploy` (asks you to log in to Cloudflare the first time).
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "stratari",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Any unknown path serves the app, which then shows the right page.
+    "not_found_handling": "single-page-application"
+  }
+  // Once stratari.gg is on this Cloudflare account, add:
+  // "routes": [{ "pattern": "stratari.gg", "custom_domain": true }]
+}

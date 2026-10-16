@@ -18,6 +18,12 @@ Works fully in the browser with no backend. To turn on accounts and cloud save, 
 to `.env`, fill in your Supabase URL and publishable key, and run `supabase/migrations/0001_saves.sql`
 once in the Supabase SQL editor.
 
+## Deploy
+
+Hosted on Cloudflare (Workers static assets, config in `wrangler.jsonc`). With the GitHub repo
+connected in the Cloudflare dashboard, every push to `main` deploys and pull requests get preview
+links. To deploy by hand: `npm run deploy`.
+
 ## Data
 
 - `src/data/lines.json` is generated from [TataDex](https://tatadex.org/evolutions/) by `npm run build:data`

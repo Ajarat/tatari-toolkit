@@ -84,11 +84,11 @@ function SignInForm() {
         <p className="text-sm text-muted">Sign in to save your plan and pick it up on any device.</p>
         <TextField isRequired name="email" type="email" value={email} onChange={setEmail} autoComplete="email">
           <Label>Email</Label>
-          <Input />
+          <Input variant="secondary" />
         </TextField>
         <TextField isRequired name="password" type="password" value={password} onChange={setPassword} autoComplete="current-password" minLength={6}>
           <Label>Password</Label>
-          <Input />
+          <Input variant="secondary" />
         </TextField>
         <div className="flex flex-wrap gap-3">
           <Button type="submit" isDisabled={!!busy}>

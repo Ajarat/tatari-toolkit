@@ -38,6 +38,8 @@ export type Step = {
   tasks: Task[];
   /** TataDex's label for how well-checked this step is. */
   confidence: 'Verified' | 'Community' | string;
+  /** The form is known (from the game) but its trial requirements haven't been found yet. */
+  unknown?: boolean;
 };
 
 export type Line = {

@@ -95,6 +95,55 @@ const FIXES: Record<string, [string, string][]> = {
   skinklet: [['Fishing Contest (use x2000 fertilizer)', 'Fishing Contest (use x2000 fishing rods)']],
 };
 
+/**
+ * Form names that differ in game from the source, keyed by line id, tier 1 first. The in-game name
+ * wins: players match these against their screen.
+ */
+const FORM_NAMES: Record<string, string[]> = {
+  // TataDex (and the official art pack folders) have T3/T4 swapped; in game the T3 is Rockwu.
+  punchimp: ['Punchimp', 'Rockfu', 'Rockwu', 'Rockong'],
+};
+
+/**
+ * T4 forms the source is missing (every line has 2 or 4 forms; TataDex has no page for these
+ * T4s yet). Names come from players and the official art pack; null where the name isn't known yet
+ * (TataDex lists them as e.g. "pet-43-4").
+ */
+const MISSING_T4: Record<string, string | null> = {
+  taptail: 'Dharmadder',
+  fumekit: 'Blastniff',
+  dumbopus: 'Lordopus',
+  sparkeet: 'Technocan',
+  lollama: 'Blechlama',
+  dewgrub: 'Morphanessa',
+  cactobud: null,
+  drilleroo: null,
+  flameow: null,
+  kittazap: null,
+};
+
+/** Whole lines TataDex has Tatari pages for but no evolution page (so no trial data yet). */
+const MISSING_LINES: { id: string; element: Element; forms: string[] }[] = [
+  { id: 'cavyzap', element: 'Lightning', forms: ['Cavyzap', 'Hippiehog', 'Wheekroller', 'Gigagnash'] },
+  { id: 'snowcub', element: 'Water', forms: ['Snowcub', 'Polarpaw', 'Blizzgrizz', 'Anglerbear'] },
+  { id: 'dolphie', element: 'Water', forms: ['Dolphie', 'Blubbles', 'Aquariel', 'Irisia'] },
+  { id: 'ringtail', element: 'Rock', forms: ['Ringtail', 'Rizzler', 'Zorrock', 'Phantothief'] },
+];
+
+const UNKNOWN_NAME = 'Unknown T4';
+
+/** A step whose form is known but whose star requirement and trials aren't. */
+const unknownStep = (toTier: number, from: string, to: string): Step => ({
+  toTier,
+  from,
+  to,
+  stars: null,
+  starsText: 'Star requirement not known yet',
+  tasks: [],
+  confidence: 'Unknown',
+  unknown: true,
+});
+
 function classify(raw: string): Task {
   const text = raw.replace(/\s*\/\s*$/, '');
   const t = text.toLowerCase();
@@ -133,7 +182,22 @@ function parseLine(id: string, html: string): Line {
     steps.push({ toTier: Number(to), from, to: toName, stars: parseStars(starsText), starsText, tasks, confidence });
   }
 
-  const forms = steps.length ? [steps[0].from, ...steps.map((s) => s.to)] : stageIds;
+  let forms = steps.length ? [steps[0].from, ...steps.map((s) => s.to)] : stageIds;
+  const renamed = FORM_NAMES[id];
+  if (renamed) {
+    const rename = new Map(forms.map((f, i) => [f, renamed[i]]));
+    forms = renamed;
+    for (const st of steps) {
+      st.from = rename.get(st.from) ?? st.from;
+      st.to = rename.get(st.to) ?? st.to;
+      for (const t of st.tasks) t.text = t.text.replace(/\b[A-Z][a-z]+\b/g, (w) => rename.get(w) ?? w);
+    }
+  }
+  if (id in MISSING_T4 && forms.length === 3) {
+    const t4 = MISSING_T4[id] ?? UNKNOWN_NAME;
+    steps.push(unknownStep(4, forms[2], t4));
+    forms = [...forms, t4];
+  }
   return {
     id,
     element: (element.charAt(0).toUpperCase() + element.slice(1)) as Element,
@@ -149,6 +213,13 @@ const files = (await readdir(path.join(CACHE, 'routes'))).filter((f) => f.endsWi
 const lines: Line[] = [];
 for (const f of files) lines.push(parseLine(f.replace(/\.html$/, ''), await readFile(path.join(CACHE, 'routes', f), 'utf8')));
 
+for (const m of MISSING_LINES) {
+  if (lines.some((l) => l.id === m.id)) continue;
+  const steps = m.forms.slice(1).map((to, i) => unknownStep(i + 2, m.forms[i], to));
+  lines.push({ ...m, steps, incomplete: false });
+}
+lines.sort((a, b) => a.id.localeCompare(b.id));
+
 const data: GameData = {
   lines,
   source: { name: 'TataDex', url: `${BASE}/evolutions/`, fetchedAt: new Date().toISOString().slice(0, 10) },
@@ -159,8 +230,9 @@ await writeFile(OUT, JSON.stringify(data, null, 1) + '\n');
 const steps = lines.flatMap((l) => l.steps.map((s) => ({ line: l.id, ...s })));
 console.log(`${lines.length} lines, ${steps.length} steps → ${path.relative(ROOT, OUT)}`);
 console.log('Incomplete lines:', lines.filter((l) => l.incomplete).map((l) => `${l.id} (${l.forms.length})`).join(', ') || 'none');
-console.log('Unread star gates:', steps.filter((s) => s.stars == null).map((s) => `${s.line} T${s.toTier} "${s.starsText}"`).join('; ') || 'none');
-for (const s of steps.filter((s) => s.toTier >= 3)) {
+console.log('Steps with unknown trials:', steps.filter((s) => s.unknown).length);
+console.log('Unread star gates:', steps.filter((s) => s.stars == null && !s.unknown).map((s) => `${s.line} T${s.toTier} "${s.starsText}"`).join('; ') || 'none');
+for (const s of steps.filter((s) => s.toTier >= 3 && !s.unknown)) {
   const ev = s.tasks.filter((t) => t.kind === 'event');
   if (!ev.length) console.log(`No event task: ${s.line} T${s.toTier}: ${s.tasks.map((t) => `[${t.kind}] ${t.text}`).join(' | ')}`);
 }

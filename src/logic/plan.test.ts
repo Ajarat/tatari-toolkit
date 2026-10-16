@@ -5,7 +5,7 @@ import data from '../data/lines.json' with { type: 'json' };
 import { copiesBetween, describeStars, starLevel, starParts } from '../data/stars';
 import type { GameData, Line } from '../data/types';
 import { FEED_STAGES, maxFeedStage, pointsToStage, ratingOf, stageFromGrades, upgradesToGrade, type StatGrades } from '../data/feeding';
-import { candidatesFor, feedTaskMet, minStarsForTier, nextStep, readiness, stepSlots, suggestPlan, type OwnedTatari } from './plan';
+import { anytimeCandidates, candidatesFor, feedTaskMet, minStarsForTier, nextStep, readiness, stepSlots, suggestPlan, type OwnedTatari } from './plan';
 import { anchorFromCurrent, goldRushWindows, rotationWindows, windowKey } from './schedule';
 
 const lines = new Map((data as GameData).lines.map((l) => [l.id, l as Line]));
@@ -130,4 +130,19 @@ test('feeding stage can be read from the three grades (all eight screenshots)', 
     ['Tideon', { atk: 'A', hp: 'C', def: 'C' }, 6],
   ];
   for (const [name, grades, stage] of seen) assert.equal(stageFromGrades(grades), stage, name);
+});
+
+test('every line has 2 or 4 forms (blue or purple)', () => {
+  const odd = (data as GameData).lines.filter((l) => l.forms.length !== 2 && l.forms.length !== 4).map((l) => l.id);
+  assert.deepEqual(odd, []);
+  assert.deepEqual(lines.get('taptail')!.forms, ['Taptail', 'Rattlecoil', 'Clangnaga', 'Dharmadder']);
+});
+
+test('a step with unknown trials is never ready or schedulable', () => {
+  const line = lines.get('taptail')!;
+  const r = readiness({ ...owned('taptail', 3, 84), grades: { atk: 'S', hp: 'S', def: 'S' } }, line)!;
+  assert.equal(r.unknown, true);
+  assert.equal(r.ready, false);
+  assert.equal(stepSlots(r.step), null);
+  assert.deepEqual(anytimeCandidates([owned('taptail', 3, 84)], lines), []);
 });

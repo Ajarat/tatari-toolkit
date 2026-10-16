@@ -98,7 +98,7 @@ export const useStore = create<Save & Actions>()(
       reset: () => set(() => ({ ...fresh(), ...stamp() })),
     }),
     {
-      // Storage key from before the app was named Statari; kept so saved data isn't lost.
+      // Storage key from before the app was named Stratari; kept so saved data isn't lost.
       name: 'tatari-toolkit',
       version: 2,
       // v1 allowed several records per line and used the wrong default schedule; start fresh.

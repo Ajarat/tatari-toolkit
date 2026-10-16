@@ -27,7 +27,7 @@ export default function Layout() {
         <div className={`mx-auto flex h-14 ${width} items-center gap-4 px-4`}>
           <NavLink to="/" className="flex items-center gap-2 font-semibold">
             <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" className="size-7" />
-            <span>Statari</span>
+            <span>Stratari</span>
           </NavLink>
           <nav className="ml-auto hidden gap-1 sm:flex">
             {NAV.map(({ to, label, end }) => (

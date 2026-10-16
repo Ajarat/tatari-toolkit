@@ -1,10 +1,10 @@
-# Tatari Toolkit
+# Statari
 
 > **Unofficial Fan-Created Work.** Not made, endorsed or authorized by Farlight Games. Clash of Critters and its characters, artwork and other materials belong to Farlight Games. Free and non-commercial.
 >
 > Made by **Zaoirse** (Clash of Critters UID 32732396).
 
-Community tools for Clash of Critters. First tool: the **evolution calendar**, which lines up your Tatari's
+Community tools for Clash of Critters, coming to [statari.gg](https://statari.gg). First tool: the **evolution calendar**, which lines up your Tatari's
 T3/T4 trials with the events they need, so you always have a couple ready when the right event starts.
 
 ## Run it

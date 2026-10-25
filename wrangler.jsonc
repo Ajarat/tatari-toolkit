@@ -9,7 +9,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "stratari",
+  "name": "tatari-toolkit",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",

@@ -1,6 +1,7 @@
 import { Button, Chip, Drawer, ToggleButton, ToggleButtonGroup } from '@heroui/react';
 import { ArrowUpCircle, Circle, CircleCheck, RotateCcw } from 'lucide-react';
 import { useSearchParams } from 'react-router';
+import { tatariArt } from '../data/art';
 import { formName, lines, maxTier } from '../data/game';
 import { copiesBetween, describeStars } from '../data/stars';
 import { eventName, feedProgress, starFloor, taskLabel } from '../logic/labels';
@@ -46,7 +47,7 @@ function EditorBody({ lineId }: { lineId: string }) {
   return (
     <>
       <Drawer.Header className="flex flex-row items-center gap-3">
-        <TatariAvatar name={name} element={line.element} />
+        <TatariAvatar name={name} element={line.element} art={tatariArt(line.id, t.tier)} />
         <div className="min-w-0">
           <Drawer.Heading className="truncate">{name}</Drawer.Heading>
           <p className="flex items-center gap-2 text-sm text-muted">

@@ -4,13 +4,21 @@ import type { ReactNode } from 'react';
 import { ELEMENT_STYLE } from '../data/game';
 import type { Element } from '../data/types';
 
-/** Placeholder art until we have permission to use the game's images: element colour + initials. */
-export function TatariAvatar({ name, element, size = 'md' }: { name: string; element: Element; size?: 'sm' | 'md' }) {
+/**
+ * Round portrait: the official art when the art pack has it (see src/data/art.ts), otherwise the
+ * element colour with the form's initials.
+ */
+export function TatariAvatar({ name, element, art, size = 'md' }: { name: string; element: Element; art?: string; size?: 'sm' | 'md' }) {
+  const box = size === 'sm' ? 'size-7 text-[11px]' : 'size-10 text-sm';
+  if (art) {
+    return (
+      <span aria-hidden className={`grid shrink-0 place-items-center overflow-hidden rounded-full bg-linear-to-br ${ELEMENT_STYLE[element].art} ${box}`}>
+        <img src={art} alt="" loading="lazy" draggable={false} className="size-[90%] object-contain" />
+      </span>
+    );
+  }
   return (
-    <span
-      aria-hidden
-      className={`grid shrink-0 place-items-center rounded-full font-semibold ${ELEMENT_STYLE[element].solid} ${size === 'sm' ? 'size-7 text-[11px]' : 'size-10 text-sm'}`}
-    >
+    <span aria-hidden className={`grid shrink-0 place-items-center rounded-full font-semibold ${ELEMENT_STYLE[element].solid} ${box}`}>
       {name.slice(0, 2)}
     </span>
   );

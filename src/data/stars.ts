@@ -2,8 +2,9 @@
  * Star levels. The game never shows a number: a Tatari has six icons, and each new level upgrades
  * one icon to the next type (bronze star → silver star → … → iridescent crown). So "4 silver moons and
  * 2 gold stars" is the Silver Moon type with 4 upgraded: 3 × 6 + 4 = 22. The last two types are
- * different: the six icons become a single emblem whose centre gem fills up over six levels. The
- * winged one (79–84) is confirmed from screenshots; the ribbon one (73–78) is a best guess so far.
+ * different: the six icons become a single winged emblem whose centre gem fills up over six levels,
+ * first with rainbow wings (73–78, from the official art pack) and then gold wings (79–84, from
+ * screenshots).
  *
  * Copy costs per level are from the Clash of Critters wiki and TataDex's calculator (the cumulative
  * totals match: 6 copies for 3★, 19 for 6★, … 889 for 84★).
@@ -18,27 +19,27 @@ export type StarType = {
   copies: number[];
   /** Shown as a single emblem whose gem fills up, instead of six icons. */
   emblem?: boolean;
-  /** Not yet confirmed against the game. */
-  unconfirmed?: boolean;
+  /** Official icon (see src/data/art.ts), when the art pack has one. */
+  art?: string;
 };
 
 const each = (n: number) => Array(6).fill(n) as number[];
 
 export const STAR_TYPES: StarType[] = [
-  { name: 'Bronze Star', icon: 'star', finish: 'bronze', copies: [1, 2, 3, 4, 4, 5] },
-  { name: 'Silver Star', icon: 'star', finish: 'silver', copies: each(5) },
-  { name: 'Gold Star', icon: 'star', finish: 'gold', copies: each(7) },
-  { name: 'Silver Moon', icon: 'moon', finish: 'silver', copies: each(7) },
-  { name: 'Gold Moon', icon: 'moon', finish: 'gold', copies: each(7) },
-  { name: 'Iridescent Moon', icon: 'moon', finish: 'iridescent', copies: each(9) },
-  { name: 'Gold Sun', icon: 'sun', finish: 'gold', copies: each(9) },
-  { name: 'Iridescent Sun', icon: 'sun', finish: 'iridescent', copies: each(11) },
-  { name: 'Red Sun', icon: 'sun', finish: 'red', copies: each(11) },
-  { name: 'Blue Crown', icon: 'crown', finish: 'blue', copies: each(13) },
-  { name: 'Gold Crown', icon: 'crown', finish: 'gold', copies: each(13) },
-  { name: 'Iridescent Crown', icon: 'crown', finish: 'iridescent', copies: each(15) },
-  { name: 'Ribbon Star', icon: 'ribbons', finish: 'iridescent', copies: each(15), emblem: true, unconfirmed: true },
-  { name: 'Winged Star', icon: 'wings', finish: 'gold', copies: [18, 20, 22, 24, 26, 28], emblem: true },
+  { name: 'Bronze Star', icon: 'star', finish: 'bronze', art: 'star-bronze', copies: [1, 2, 3, 4, 4, 5] },
+  { name: 'Silver Star', icon: 'star', finish: 'silver', art: 'star-silver', copies: each(5) },
+  { name: 'Gold Star', icon: 'star', finish: 'gold', art: 'star-gold', copies: each(7) },
+  { name: 'Silver Moon', icon: 'moon', finish: 'silver', art: 'moon-silver', copies: each(7) },
+  { name: 'Gold Moon', icon: 'moon', finish: 'gold', art: 'moon-gold', copies: each(7) },
+  { name: 'Iridescent Moon', icon: 'moon', finish: 'iridescent', art: 'moon-iridescent', copies: each(9) },
+  { name: 'Gold Sun', icon: 'sun', finish: 'gold', art: 'sun-gold', copies: each(9) },
+  { name: 'Iridescent Sun', icon: 'sun', finish: 'iridescent', art: 'sun-iridescent', copies: each(11) },
+  { name: 'Red Sun', icon: 'sun', finish: 'red', art: 'sun-red', copies: each(11) },
+  { name: 'Blue Crown', icon: 'crown', finish: 'blue', art: 'crown-blue', copies: each(13) },
+  { name: 'Gold Crown', icon: 'crown', finish: 'gold', art: 'crown-gold', copies: each(13) },
+  { name: 'Iridescent Crown', icon: 'crown', finish: 'iridescent', art: 'crown-iridescent', copies: each(15) },
+  { name: 'Iridescent Winged Star', icon: 'ribbons', finish: 'iridescent', copies: each(15), emblem: true, art: 'emblem-iridescent' },
+  { name: 'Gold Winged Star', icon: 'wings', finish: 'gold', copies: [18, 20, 22, 24, 26, 28], emblem: true },
 ];
 
 export const SLOTS = 6;

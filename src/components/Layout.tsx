@@ -49,7 +49,8 @@ export default function Layout() {
       <main className={`mx-auto w-full ${width} flex-1 px-4 pt-6 pb-28 sm:px-6 sm:pb-12`}>
         <Outlet />
         <footer className="mt-14 text-center text-xs leading-relaxed text-muted">
-          Unofficial Fan-Created Work. Not made, endorsed or authorized by Farlight Games. Trial data from{' '}
+          Unofficial Fan-Created Work. Not made, endorsed or authorized by Farlight Games. Clash of Critters art © Farlight Games, from the official
+          creator art pack. Trial data from{' '}
           <a href="https://tatadex.org/" target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-foreground">
             TataDex
           </a>

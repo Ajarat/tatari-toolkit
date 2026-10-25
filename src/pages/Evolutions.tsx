@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { ElementChip, TatariAvatar } from '../components/bits';
 import { ElementFilter } from '../components/ElementFilter';
 import { taskLabel } from '../logic/labels';
+import { tatariArt } from '../data/art';
 import { game } from '../data/game';
 import type { Element } from '../data/types';
 
@@ -43,7 +44,7 @@ export default function Evolutions() {
         {list.map((l) => (
           <Card key={l.id} className="flex flex-col gap-3 p-4">
             <div className="flex items-center gap-3">
-              <TatariAvatar name={l.forms[0]} element={l.element} />
+              <TatariAvatar name={l.forms[0]} element={l.element} art={tatariArt(l.id, l.forms.length)} />
               <div className="min-w-0">
                 <p className="font-medium">{l.forms.join(' → ')}</p>
                 <p className="flex items-center gap-2 text-sm text-muted">

@@ -29,6 +29,10 @@ links. To deploy by hand: `npm run deploy`.
 - `src/data/lines.json` is generated from [TataDex](https://tatadex.org/evolutions/) by `npm run build:data`
   (add `-- --fetch` to download fresh pages into `.cache/`). Trial text is kept as written; the parser adds
   star levels, which events a task can be done in, and whether it counts retroactively.
+- `public/art` and `src/data/art.json` come from the official Clash of Critters creator art pack
+  (Farlight Games) via `npm run fetch:art`: one picture per form, the star level icons and the element
+  badges. Art is matched by line and tier, so pack folders named differently from the game still land
+  on the right form. The art belongs to Farlight Games.
 - `src/data/events.ts` holds event names, the rotation order and the default schedule anchor.
 
 ## Scripts

@@ -1,6 +1,7 @@
 import { Button, Tooltip } from '@heroui/react';
 import { Minus, Plus } from 'lucide-react';
 import { useId, type ReactNode } from 'react';
+import { starArt } from '../data/art';
 import { describeStars, MAX_STARS, SLOTS, starLevel, starParts, starSlots, STAR_TYPES, type Finish, type StarType } from '../data/stars';
 
 /** Colours picked from in-game screenshots: bronze reads peach, silver pale ice blue, "blue" crowns lavender. */
@@ -40,6 +41,7 @@ const RIBBON = 'M21 18l-6 9 4-1 2 3 4-9z';
  */
 export function Emblem({ kind, fill, height = 20 }: { kind: 'wings' | 'ribbons'; fill: number; height?: number }) {
   const id = useId();
+  if (kind === 'ribbons' && starArt('emblem-iridescent')) return <ArtEmblem fill={fill} height={height} />;
   const gemTop = 22 - (16 * fill) / SLOTS;
   return (
     <svg viewBox="0 0 56 28" width={height * 2} height={height} aria-hidden className="shrink-0">
@@ -75,6 +77,22 @@ export function Emblem({ kind, fill, height = 20 }: { kind: 'wings' | 'ribbons';
   );
 }
 
+/**
+ * The official rainbow-winged emblem (73–78): the empty emblem with the gem picture revealed from the
+ * bottom as it fills. The art is 141×65.
+ */
+function ArtEmblem({ fill, height }: { fill: number; height: number }) {
+  const gem = starArt('emblem-iridescent-gem');
+  // The gem sits roughly between 18% and 82% of the image's height.
+  const top = 82 - (64 * fill) / SLOTS;
+  return (
+    <span aria-hidden className="relative inline-block shrink-0" style={{ width: (height * 141) / 65, height }}>
+      <img src={starArt('emblem-iridescent')} alt="" draggable={false} className="absolute inset-0 size-full" />
+      {gem && fill > 0 && <img src={gem} alt="" draggable={false} className="absolute inset-0 size-full" style={{ clipPath: `inset(${top}% 0 0 0)` }} />}
+    </span>
+  );
+}
+
 const SHAPES: Record<'star' | 'moon' | 'sun' | 'crown', ReactNode> = {
   star: <polygon points="12,2 15.1,8.6 22,9.3 16.8,14 18.2,21 12,17.3 5.8,21 7.2,14 2,9.3 8.9,8.6" />,
   moon: <path d="M19.5 15.5A8.5 8.5 0 1 1 8.5 4.5a7 7 0 0 0 11 11z" />,
@@ -107,6 +125,8 @@ export function StarGlyph({ type, size = 20 }: { type: StarType | null; size?: n
     );
   }
   if (type.icon === 'wings' || type.icon === 'ribbons') return <Emblem kind={type.icon} fill={SLOTS} height={size} />;
+  const src = type.art && starArt(type.art);
+  if (src) return <img src={src} alt="" width={size} height={size} draggable={false} className="shrink-0" />;
   const fill = type.finish === 'iridescent' ? `url(#${gradientId})` : FINISH[type.finish];
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden className="shrink-0">

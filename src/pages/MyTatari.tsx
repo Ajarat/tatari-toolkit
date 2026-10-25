@@ -5,6 +5,7 @@ import { ReadyChip, StarsChip } from '../components/bits';
 import { ElementFilter, ElementIcon } from '../components/ElementFilter';
 import { FeedingControl } from '../components/Feeding';
 import { StarControl } from '../components/Stars';
+import { tatariArt } from '../data/art';
 import { GRADE_STYLE } from '../data/feeding';
 import { ELEMENT_STYLE, formName, game } from '../data/game';
 import type { Element, Line } from '../data/types';
@@ -88,17 +89,22 @@ function TatariCard({ line, t, isSetUp }: { line: Line; t: OwnedTatari; isSetUp:
   const r = readiness(t, line);
   const name = formName(line, t.tier);
   const grade = rating(t);
+  const art = tatariArt(line.id, t.tier);
 
   return (
     <Card className={`flex flex-col gap-0 overflow-hidden p-0 ${isSetUp ? '' : 'opacity-80 hover:opacity-100'}`}>
-      {/* Art area: placeholder until we can use the game's images. */}
+      {/* Art area: the official picture on the element's colours, or initials when the pack has none. */}
       <button
         type="button"
         onClick={() => edit(line.id)}
         aria-label={`${name} details`}
         className={`relative grid aspect-[4/3] place-items-center bg-linear-to-br ${ELEMENT_STYLE[line.element].art}`}
       >
-        <span className="text-4xl font-black tracking-tight text-white/90 drop-shadow-md">{name.slice(0, 2)}</span>
+        {art ? (
+          <img src={art} alt="" loading="lazy" draggable={false} className="absolute inset-0 size-full object-contain p-3 drop-shadow-lg" />
+        ) : (
+          <span className="text-4xl font-black tracking-tight text-white/90 drop-shadow-md">{name.slice(0, 2)}</span>
+        )}
         <span className="absolute top-2 left-2">
           <ElementIcon element={line.element} />
         </span>

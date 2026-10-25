@@ -6,6 +6,7 @@ import { CheckRow, NeedsChip, ReadyChip, SectionTitle, StarsChip, TatariAvatar }
 import { eventName, feedProgress, optionLabel } from '../logic/labels';
 import { StarRow } from '../components/Stars';
 import { useEditTatari } from '../state/useEditTatari';
+import { tatariArt } from '../data/art';
 import { EVENTS } from '../data/events';
 import { formName, lines } from '../data/game';
 import { anytimeCandidates, candidatesFor, checkKey, feedLabel, suggestPlan, type Candidate } from '../logic/plan';
@@ -152,7 +153,7 @@ function CandidateRow({ c, w, suggested }: { c: Candidate; w?: EventWindow; sugg
     <div className={`flex flex-col gap-2 rounded-lg p-2 ${isPlanned ? 'bg-accent/10' : ''}`}>
       <div className="flex items-center gap-3">
         <button type="button" onClick={() => edit(line.id)} aria-label={`Edit ${formName(line, tatari.tier)}`} className="shrink-0 rounded-full">
-          <TatariAvatar name={formName(line, tatari.tier)} element={line.element} />
+          <TatariAvatar name={formName(line, tatari.tier)} element={line.element} art={tatariArt(line.id, tatari.tier)} />
         </button>
         <div className="min-w-0 flex-1">
           <p className="flex flex-wrap items-center gap-x-2 text-sm font-medium">

@@ -1,0 +1,141 @@
+/*
+ * "Critter Camp": a dark HeroUI v3 theme in the colours of the Clash of Critters UI.
+ * Palette taken from in-game screens: deep indigo panels on a checkered backdrop, thick
+ * near-black outlines, a blue-purple accent (the Invite Friend panel), lime green for success
+ * ("Formation"), yellow calls to action ("Auto-Match"), a vivid purple highlight ("Difficulty")
+ * and chunky white lettering.
+ *
+ * Unlayered so it always wins over HeroUI's layered defaults, and it targets every light/dark
+ * selector so the app stays dark. Hover, soft and border variants are derived by HeroUI from
+ * the base tokens, so they re-tint automatically.
+ */
+
+:root,
+.light,
+.dark,
+[data-theme="light"],
+[data-theme="dark"],
+[data-theme="default"] {
+  color-scheme: dark;
+
+  /* ── Brand primitives ─────────────────────────────── */
+  --cc-indigo: oklch(0.26 0.08 285); /* panel indigo */
+  --cc-purple: oklch(0.55 0.2 290); /* "Modes" backdrop purple */
+  --cc-iris: oklch(0.6 0.2 282); /* blue-purple of the Invite Friend panel and Modes title */
+  --cc-violet: oklch(0.68 0.24 315); /* Difficulty badge */
+  --cc-lime: oklch(0.82 0.21 135); /* Formation button */
+  --cc-gold: oklch(0.87 0.17 92); /* Auto-Match button, titles */
+  --cc-sky: oklch(0.74 0.14 230); /* water / info blue */
+  --cc-ink: oklch(0.17 0.04 285); /* outlines and text on bright fills */
+  --cc-lavender: oklch(0.8 0.06 290); /* secondary text */
+
+  /* ── Shape ─────────────────────────────────────────── */
+  --radius: 0.75rem;
+  --field-radius: calc(var(--radius) * 1.2);
+
+  /* ── Base ──────────────────────────────────────────── */
+  --background: oklch(0.2 0.06 285);
+  --foreground: oklch(0.98 0.01 290);
+
+  /* Surfaces: cards, accordions, disclosure groups */
+  --surface: oklch(0.28 0.09 285);
+  --surface-foreground: var(--foreground);
+  --surface-secondary: oklch(0.34 0.1 285);
+  --surface-secondary-foreground: var(--foreground);
+  --surface-tertiary: oklch(0.4 0.11 285);
+  --surface-tertiary-foreground: var(--foreground);
+
+  /* Overlays: popovers, drawers, menus, tooltips */
+  --overlay: oklch(0.29 0.09 285);
+  --overlay-foreground: var(--foreground);
+
+  --muted: var(--cc-lavender);
+
+  --default: oklch(0.36 0.1 285);
+  --default-foreground: var(--foreground);
+
+  /* Primary action colour: the game's blue-purple. Lime stays for success and "Live". */
+  --accent: var(--cc-iris);
+  --accent-foreground: oklch(0.99 0.005 290);
+
+  /* ── Form fields ───────────────────────────────────── */
+  --field-background: oklch(0.23 0.07 285);
+  --field-foreground: var(--foreground);
+  --field-placeholder: oklch(0.68 0.05 290);
+  --field-border: oklch(0.38 0.1 285);
+  --field-border-width: 1px;
+
+  /* ── Status ────────────────────────────────────────── */
+  --success: var(--cc-lime);
+  --success-foreground: var(--cc-ink);
+  --warning: var(--cc-gold);
+  --warning-foreground: var(--cc-ink);
+  --danger: oklch(0.66 0.22 22);
+  --danger-foreground: oklch(0.99 0 0);
+
+  /* ── Components / misc ─────────────────────────────── */
+  --segment: oklch(0.42 0.12 285);
+  --segment-foreground: var(--foreground);
+
+  --border: oklch(0.36 0.1 285);
+  --separator: oklch(0.32 0.09 285);
+  --focus: var(--cc-gold);
+  --link: var(--cc-sky);
+
+  --backdrop: oklch(0.12 0.04 285 / 0.72);
+  --scrollbar-thumb: color-mix(in oklch, var(--cc-purple) 45%, transparent);
+
+  /* Game panels have a thick dark outline rather than a soft shadow. */
+  --surface-shadow: 0 0 0 2px var(--cc-ink);
+  --overlay-shadow:
+    0 0 0 2px var(--cc-ink),
+    0 14px 28px 0 rgba(0, 0, 0, 0.45);
+  --field-shadow: 0 0 0 0 transparent inset;
+}
+
+/* Extra palette for Tailwind: bg-lime, text-gold, bg-violet, border-ink… */
+@theme inline {
+  --color-indigo-panel: var(--cc-indigo);
+  --color-cc-purple: var(--cc-purple);
+  --color-iris: var(--cc-iris);
+  --color-violet: var(--cc-violet);
+  --color-lime: var(--cc-lime);
+  --color-gold: var(--cc-gold);
+  --color-sky: var(--cc-sky);
+  --color-ink: var(--cc-ink);
+  --color-lavender: var(--cc-lavender);
+  --font-sans: "Fredoka Variable", ui-rounded, system-ui, sans-serif;
+}
+
+/* The checkered backdrop behind every in-game screen, kept faint so text stays readable. */
+body {
+  background-color: var(--background);
+  background-image: repeating-conic-gradient(oklch(1 0 0 / 0.025) 0 25%, transparent 0 50%);
+  background-size: 56px 56px;
+}
+
+/* Chunky white page titles with a dark outline and drop, like the game's headings. */
+main h1 {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow:
+    -1.5px -1.5px 0 var(--cc-ink),
+    1.5px -1.5px 0 var(--cc-ink),
+    -1.5px 1.5px 0 var(--cc-ink),
+    1.5px 1.5px 0 var(--cc-ink),
+    0 3px 0 var(--cc-ink);
+}
+
+/* Buttons get the game's outline and a "pressable" bottom edge. */
+.button--primary,
+.button--secondary {
+  box-shadow:
+    0 0 0 2px var(--cc-ink),
+    0 3px 0 0 var(--cc-ink);
+  font-weight: 600;
+}
+.button--primary:active,
+.button--secondary:active {
+  box-shadow: 0 0 0 2px var(--cc-ink);
+  translate: 0 2px;
+}

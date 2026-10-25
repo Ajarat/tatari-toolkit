@@ -15,6 +15,7 @@
     "typecheck": "tsc -b && tsc -p tsconfig.scripts.json"
   },
   "dependencies": {
+    "@fontsource-variable/fredoka": "^5.3.0",
     "@heroui/react": "^3.2.6",
     "@heroui/styles": "^3.2.6",
     "@supabase/supabase-js": "^2.118.0",

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+@import "@fontsource-variable/fredoka";
+/* The Clash of Critters colour theme. Unlayered so it wins over HeroUI's layered defaults. */
+@import "./themes/critters.css";
 
 body {
   min-height: 100dvh;
